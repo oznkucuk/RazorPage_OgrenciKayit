@@ -15,4 +15,15 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color : rgb(184, 208, 18)
+}
+
+.navbar-brand{
+    border-end-end-radius : 10px;
+    
+}
+.pict{
+    width :150px;
+    height :50px;
+    
 }
