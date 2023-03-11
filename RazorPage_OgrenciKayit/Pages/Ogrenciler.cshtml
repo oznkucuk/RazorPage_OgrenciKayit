@@ -5,4 +5,49 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div>
+    <row>
+        <a class="btn btn-danger" asp-page="./OgrenciKayit">Öğrenci Kayıt</a>
+    </row>
+    <row>
+        <table class="table">
+            <thread>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Adı</th>
+                    <th scope="col">Soyadı</th>
+                    <th scope="col">Kursu</th>
+                    <th scope="col">İşlemler</th>
+                </tr>
+            </thread>
+            <tbody>
+                @if (Model.Ogrenciler != null)
+                {
+                    @foreach (var item in Model.Ogrenciler)
+                    {
+                        <tr>
+                            <td scope="col">@item.Id</td>
+                            <td scope="col">@item.Ad</td>
+                            <td scope="col">@item.Soyad</td>
+                            @foreach (var krs in Model.Kurslar)
+                            {
+                                if (item.KursId == krs.KursId)
+                                {
+
+                                    <td scope="col">@item.Kurs.Kursadi</td>
+                                }
+                            }
+
+                            <td>
+                                <a asp-page="./Duzenle" asp-route-id=@item.Id>Düzenle</a>
+                                <a asp-asp-page="./#" asp-route-itemid=@item.Id>Sil</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </row>
+</div>
+
+<p>Öğrenci Bilgileri Saklama Hakkı Firmamıza Aittir</p>

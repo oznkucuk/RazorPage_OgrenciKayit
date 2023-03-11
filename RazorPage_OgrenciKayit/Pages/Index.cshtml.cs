@@ -1,19 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPage_OgrenciKayit.Data;
+using RazorPage_OgrenciKayit.Model;
 
 namespace RazorPage_OgrenciKayit.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        public class OgrenciModel : PageModel
         {
-            _logger = logger;
-        }
+            public List<Ogrenci> Ogrencis { get; set; }
 
-        public void OnGet()
-        {
+            private readonly OgrencilerDbContext _db;
+
+            public OgrenciModel(OgrencilerDbContext db)
+            {
+                _db = db;
+            }
+
+            public void OnGet()
+            {
+                Ogrencis = _db.Ogrencis.OrderBy(c => c.Id).ToList();
+            }
 
         }
     }

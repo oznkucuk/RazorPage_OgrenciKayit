@@ -1,0 +1,50 @@
+﻿@page
+@model RazorPage_OgrenciKayit.Pages.OgrenciKayitModel
+@{
+}
+
+<h1>EKLE</h1>
+<p>Öğrenci Bilgilerini Giriniz:</p>
+
+
+<form method="post">
+    <div class="mb-3">
+        <label for="enabledTextInput" class="form-label">Ad</label>
+        <input type="text" asp-for=@Model.Ogrenci.Ad id="disabledTextInput" class="form-control" placeholder="Ad">
+    </div>
+    <div class="mb-3">
+        <label for="enabledTextInput" class="form-label">Soyad</label>
+        <input type="text" asp-for=@Model.Ogrenci.Soyad id="disabledTextInput" class="form-control" placeholder="Soyad">
+    </div>
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Kurs Seç</label>
+        <select class="form-select" name="secId">
+            <option selected>Kurs Seçin</option>
+            @if (Model.Kurslar != null)
+            {
+                foreach (var item in Model.Kurslar)
+                {
+                    <option value="@item.KursId">@item.Kursadi</option>
+
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+
+
+
+@*<form method="post">
+    Name:
+    <div>
+        <div asp-validation-summary="All"></div>
+        <input type="text" asp-for="Ogrenci.Ad" />
+        <span asp-validation-for="Ogrenci.Ad" class="text-danger"></span>
+    </div>
+
+    <input type="submit" />
+</form>
+<a asp-page="index">BACK</a>*@

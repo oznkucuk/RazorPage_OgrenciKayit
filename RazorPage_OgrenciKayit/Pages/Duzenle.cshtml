@@ -1,0 +1,37 @@
+﻿@page
+@model RazorPage_OgrenciKayit.Pages.DuzenleModel
+@{
+}
+
+<form method="post">
+    <input asp-for="@Model.Ogrenciler.Id" type="hidden"/>
+    <div class="mb-3">
+        <label for="enabledTextInput" class="form-label">Ad</label>
+        <input type="text" asp-for=@Model.Ogrenciler.Ad id="disabledTextInput" class="form-control" placeholder="Ad">
+    </div>
+    <div class="mb-3">
+        <label for="enabledTextInput" class="form-label">Soyad</label>
+        <input type="text" asp-for=@Model.Ogrenciler.Soyad id="disabledTextInput" class="form-control" placeholder="Soyad">
+    </div>
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Kurs Seç</label>
+        <select class="form-select" name="secId">
+            <option selected>Kurs Seçin</option>
+            @if (Model.Kurslar != null)
+            {
+                @foreach (var item in Model.Kurslar)
+                {
+                    <option value="@item.KursId">@item.Kursadi</option>
+
+                }
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+
+
+
+
