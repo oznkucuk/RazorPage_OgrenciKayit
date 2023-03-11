@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace RazorPage_OgrenciKayit.Pages
 {
-    public class PrivacyModel : PageModel
+    public class OgrencilerModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<OgrencilerModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public OgrencilerModel(ILogger<OgrencilerModel> logger)
         {
             _logger = logger;
         }

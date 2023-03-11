@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using RazorPage_OgrenciKayit.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<OgrencilerDbContext>(options => options.UseSqlServer
+(builder.Configuration.GetConnectionString("MyConnectionString")));
 
 var app = builder.Build();
 
