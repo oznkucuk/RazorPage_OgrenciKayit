@@ -14,12 +14,10 @@ namespace RazorPage_OgrenciKayit.Pages
         public List<Kurs> Kurslar { get; set; }
 
         private readonly OgrencilerDbContext _db;
-        private readonly ILogger<DuzenleModel> _logger;
 
-        public DuzenleModel(OgrencilerDbContext db, ILogger<DuzenleModel> logger)
+        public DuzenleModel(OgrencilerDbContext db)
         {
             _db = db;
-            _logger = logger;
             Kurslar = _db.Kurs.ToList();
         }
 
@@ -42,10 +40,6 @@ namespace RazorPage_OgrenciKayit.Pages
 
         public ActionResult OnPost(string secId)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
 
             if (Ogrenciler != null & secId!=null)
             {

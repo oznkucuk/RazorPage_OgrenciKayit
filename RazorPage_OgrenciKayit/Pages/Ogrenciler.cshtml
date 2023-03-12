@@ -7,7 +7,7 @@
 
 <div>
     <row>
-        <a class="btn btn-danger" asp-page="./OgrenciKayit">Öğrenci Kayıt</a>
+        <a class="btn btn-success" asp-page="./OgrenciKayit">Öğrenci Kayıt</a>
     </row>
     <row>
         <table class="table">
@@ -39,8 +39,8 @@
                             }
 
                             <td>
-                                <a asp-page="./Duzenle" asp-route-id=@item.Id>Düzenle</a>
-                                <a asp-asp-page="./#" asp-route-itemid=@item.Id>Sil</a>
+                                <a asp-page="./Duzenle" asp-route-id=@item.Id>Düzenle</a> |
+                                <a asp-page="./Silme" asp-route-id=@item.Id>Sil</a> |
                             </td>
                         </tr>
                     }
@@ -50,4 +50,4 @@
     </row>
 </div>
 
-<p>Öğrenci Bilgileri Saklama Hakkı Firmamıza Aittir</p>
+<p>Bilgileri Saklama Hakkı Firmamıza Aittir</p>

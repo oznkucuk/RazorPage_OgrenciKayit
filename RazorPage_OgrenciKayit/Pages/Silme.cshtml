@@ -1,0 +1,25 @@
+﻿@page
+@model RazorPage_OgrenciKayit.Pages.SilmeModel
+@{
+}
+
+
+<form method="post">
+    <fieldset disabled>
+        <input asp-for="@Model.Ogrenciler.Id" type="hidden" />
+        <div class="mb-3">
+            <label for="enabledTextInput" class="form-label">Ad</label>
+            <input type="text" asp-for=@Model.Ogrenciler.Ad id="disabledTextInput" class="form-control" placeholder="Ad">
+        </div>
+        <div class="mb-3">
+            <label for="enabledTextInput" class="form-label">Soyad</label>
+            <input type="text" asp-for=@Model.Ogrenciler.Soyad id="disabledTextInput" class="form-control" placeholder="Soyad">
+        </div>
+        <div class="mb-3">
+            <label for="enabledTextInput" class="form-label">Kurs</label>
+            <input type="text" asp-for=@Model.Kurs.Kursadi id="disabledTextInput" class="form-control" placeholder="Kurs">
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-success">Sil</button>
+    <a class="btn btn-primary" href="./Ogrenciler">Geri</a>
+</form>
