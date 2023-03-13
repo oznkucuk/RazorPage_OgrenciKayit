@@ -12,6 +12,6 @@ namespace RazorPage_OgrenciKayit.Data
         }
         public DbSet<Ogrenci> Ogrencis { get; set; }
         public DbSet<Kurs> Kurs { get; set; }
-        public DbSet<IletisimModel> IletisimModels { get; set; }
+        public DbSet<Iletisim> Iletisim { get; set; }
     }
 }
