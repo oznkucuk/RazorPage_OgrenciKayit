@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPage_OgrenciKayit.Pages.KursEklemeModel
+@{
+}
+<h1 style="text-align: center">Kurs Ekleme</h1>
+<p>Kurs Adını Girin:</p>
+<form method="post">
+    <div class="mb-3">
+        <label for="enabledTextInput" class="form-label">Kurs Adı</label>
+        <input type="text" asp-for=@Model.Kurs.Kursadi class="form-control" placeholder="Kurs Adı">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Ekle</button>
+    <a class="btn btn-danger" href="./Kurslar">Geri</a>
+</form>

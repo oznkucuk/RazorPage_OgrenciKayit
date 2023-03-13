@@ -25,10 +25,6 @@ namespace RazorPage_OgrenciKayit.Pages
         }
         public ActionResult OnPost(string secId)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
 
             if (Ogrenci != null)
             {

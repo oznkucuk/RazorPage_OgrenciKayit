@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RazorPage_OgrenciKayit.Model;
+using RazorPage_OgrenciKayit.Pages;
 
 namespace RazorPage_OgrenciKayit.Data
 {
@@ -11,5 +12,6 @@ namespace RazorPage_OgrenciKayit.Data
         }
         public DbSet<Ogrenci> Ogrencis { get; set; }
         public DbSet<Kurs> Kurs { get; set; }
+        public DbSet<IletisimModel> IletisimModels { get; set; }
     }
 }
