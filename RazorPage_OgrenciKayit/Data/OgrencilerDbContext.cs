@@ -6,12 +6,17 @@ namespace RazorPage_OgrenciKayit.Data
 {
     public class OgrencilerDbContext : DbContext
     {
-        public OgrencilerDbContext(DbContextOptions<OgrencilerDbContext> options ) : base(options)
+        public OgrencilerDbContext(DbContextOptions<OgrencilerDbContext> options) : base(options)
         {
-            
+
         }
         public DbSet<Ogrenci> Ogrencis { get; set; }
         public DbSet<Kurs> Kurs { get; set; }
-        public DbSet<Iletisim> Iletisim { get; set; }
+        public DbSet<Iletisim> Iletisims { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Iletisim>().HasKey(i => i.MesajId);
+        }
     }
 }

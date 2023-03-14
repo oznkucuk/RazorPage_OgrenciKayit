@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPage_OgrenciKayit.Data;
 
@@ -11,9 +12,10 @@ using RazorPage_OgrenciKayit.Data;
 namespace RazorPage_OgrenciKayit.Migrations
 {
     [DbContext(typeof(OgrencilerDbContext))]
-    partial class OgrencilerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230314080018_yenitablo")]
+    partial class yenitablo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

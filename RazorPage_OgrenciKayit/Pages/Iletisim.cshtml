@@ -1,0 +1,43 @@
+﻿@page
+@model RazorPage_OgrenciKayit.Pages.IletisimModel
+@{
+}
+<h1 style="text-align:center">İLETİŞİM</h1>
+<p>Mesajınızı Giriniz:</p>
+
+
+<form method="post">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="enabledTextInput" class="form-label">Ad</label>
+                <input type="text" asp-for=@Model.Iletisim.AdSoyad id="disabledTextInput" class="form-control" placeholder="Ad Soyad">
+            </div>
+            <div class="mb-3">
+                <label for="enabledTextInput" class="form-label">Mail</label>
+                <input type="text" asp-for=@Model.Iletisim.Mail id="disabledTextInput" class="form-control" placeholder="Mail">
+            </div>
+            <div class="mb-3">
+                <label for="enabledTextInput" class="form-label">Konu</label>
+                <input type="text" asp-for=@Model.Iletisim.Konu id="disabledTextInput" class="form-control" placeholder="Konu">
+            </div>
+            <div class="mb-3">
+                <label for="enabledTextInput" class="form-label">Açıklama</label>
+                <input type="text" asp-for=@Model.Iletisim.Aciklama id="disabledTextInput" class="form-control" placeholder="Açıklama">
+            </div>
+        </div>
+        <div class="col-3" style="text-align:center">
+            
+        </div>
+        <div class="col-3" style="text-align:center">
+            <h2>Adres</h2>
+            <p style="text-align:end">Üniversite Mahallesi, 22025 Nolu Sokak, Yenipınar İş Merkezi.</p>
+            <p style="text-align:end">Karataş / Gaziantep</p>
+            <p style="text-align:end">Tel:0532 327 2727</p>
+
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Gönder</button>
+    <a class="btn btn-danger" asp-page="/Index">Geri</a>
+</form>
